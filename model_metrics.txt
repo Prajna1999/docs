@@ -1,0 +1,158 @@
+build: 4721 (f3552296) with gcc-11 (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0 for x86_64-linux-gnu
+main: llama backend init
+main: load the model and apply lora adapter, if any
+llama_model_loader: loaded meta data with 37 key-value pairs and 291 tensors from /home/prajna/.cache/llama.cpp/Prajna1999_Mistral-7B-Instruct-v0.3-Q4_K_M-GGUF_mistral-7b-instruct-v0.3-q4_k_m.gguf (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.type str              = model
+llama_model_loader: - kv   2:                               general.name str              = Mistral 7B Instruct v0.3
+llama_model_loader: - kv   3:                            general.version str              = v0.3
+llama_model_loader: - kv   4:                           general.finetune str              = Instruct
+llama_model_loader: - kv   5:                           general.basename str              = Mistral
+llama_model_loader: - kv   6:                         general.size_label str              = 7B
+llama_model_loader: - kv   7:                            general.license str              = apache-2.0
+llama_model_loader: - kv   8:                   general.base_model.count u32              = 1
+llama_model_loader: - kv   9:                  general.base_model.0.name str              = Mistral 7B v0.3
+llama_model_loader: - kv  10:               general.base_model.0.version str              = v0.3
+llama_model_loader: - kv  11:          general.base_model.0.organization str              = Mistralai
+llama_model_loader: - kv  12:              general.base_model.0.repo_url str              = https://huggingface.co/mistralai/Mist...
+llama_model_loader: - kv  13:                          llama.block_count u32              = 32
+llama_model_loader: - kv  14:                       llama.context_length u32              = 32768
+llama_model_loader: - kv  15:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv  16:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv  17:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv  18:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv  19:                       llama.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv  20:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  21:                           llama.vocab_size u32              = 32768
+llama_model_loader: - kv  22:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv  23:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  24:                         tokenizer.ggml.pre str              = default
+llama_model_loader: - kv  25:                      tokenizer.ggml.tokens arr[str,32768]   = ["<unk>", "<s>", "</s>", "[INST]", "[...
+llama_model_loader: - kv  26:                      tokenizer.ggml.scores arr[f32,32768]   = [-1000.000000, -1000.000000, -1000.00...
+llama_model_loader: - kv  27:                  tokenizer.ggml.token_type arr[i32,32768]   = [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ...
+llama_model_loader: - kv  28:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  29:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  30:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  31:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  32:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  33:                    tokenizer.chat_template str              = {%- if messages[0]["role"] == "system...
+llama_model_loader: - kv  34:            tokenizer.ggml.add_space_prefix bool             = true
+llama_model_loader: - kv  35:               general.quantization_version u32              = 2
+llama_model_loader: - kv  36:                          general.file_type u32              = 15
+llama_model_loader: - type  f32:   65 tensors
+llama_model_loader: - type q4_K:  193 tensors
+llama_model_loader: - type q6_K:   33 tensors
+print_info: file format = GGUF V3 (latest)
+print_info: file type   = Q4_K - Medium
+print_info: file size   = 4.07 GiB (4.83 BPW) 
+load: special_eos_id is not in special_eog_ids - the tokenizer config may be incorrect
+load: special tokens cache size = 771
+load: token to piece cache size = 0.1731 MB
+print_info: arch             = llama
+print_info: vocab_only       = 0
+print_info: n_ctx_train      = 32768
+print_info: n_embd           = 4096
+print_info: n_layer          = 32
+print_info: n_head           = 32
+print_info: n_head_kv        = 8
+print_info: n_rot            = 128
+print_info: n_swa            = 0
+print_info: n_embd_head_k    = 128
+print_info: n_embd_head_v    = 128
+print_info: n_gqa            = 4
+print_info: n_embd_k_gqa     = 1024
+print_info: n_embd_v_gqa     = 1024
+print_info: f_norm_eps       = 0.0e+00
+print_info: f_norm_rms_eps   = 1.0e-05
+print_info: f_clamp_kqv      = 0.0e+00
+print_info: f_max_alibi_bias = 0.0e+00
+print_info: f_logit_scale    = 0.0e+00
+print_info: n_ff             = 14336
+print_info: n_expert         = 0
+print_info: n_expert_used    = 0
+print_info: causal attn      = 1
+print_info: pooling type     = 0
+print_info: rope type        = 0
+print_info: rope scaling     = linear
+print_info: freq_base_train  = 1000000.0
+print_info: freq_scale_train = 1
+print_info: n_ctx_orig_yarn  = 32768
+print_info: rope_finetuned   = unknown
+print_info: ssm_d_conv       = 0
+print_info: ssm_d_inner      = 0
+print_info: ssm_d_state      = 0
+print_info: ssm_dt_rank      = 0
+print_info: ssm_dt_b_c_rms   = 0
+print_info: model type       = 7B
+print_info: model params     = 7.25 B
+print_info: general.name     = Mistral 7B Instruct v0.3
+print_info: vocab type       = SPM
+print_info: n_vocab          = 32768
+print_info: n_merges         = 0
+print_info: BOS token        = 1 '<s>'
+print_info: EOS token        = 2 '</s>'
+print_info: UNK token        = 0 '<unk>'
+print_info: LF token         = 781 '<0x0A>'
+print_info: EOG token        = 2 '</s>'
+print_info: max token length = 48
+load_tensors: loading model tensors, this can take a while... (mmap = true)
+load_tensors:   CPU_Mapped model buffer size =  4169.52 MiB
+................................................................................................
+llama_init_from_model: n_seq_max     = 1
+llama_init_from_model: n_ctx         = 4096
+llama_init_from_model: n_ctx_per_seq = 4096
+llama_init_from_model: n_batch       = 2048
+llama_init_from_model: n_ubatch      = 512
+llama_init_from_model: flash_attn    = 0
+llama_init_from_model: freq_base     = 1000000.0
+llama_init_from_model: freq_scale    = 1
+llama_init_from_model: n_ctx_per_seq (4096) < n_ctx_train (32768) -- the full capacity of the model will not be utilized
+llama_kv_cache_init: kv_size = 4096, offload = 1, type_k = 'f16', type_v = 'f16', n_layer = 32, can_shift = 1
+llama_kv_cache_init:        CPU KV buffer size =   512.00 MiB
+llama_init_from_model: KV self size  =  512.00 MiB, K (f16):  256.00 MiB, V (f16):  256.00 MiB
+llama_init_from_model:        CPU  output buffer size =     0.12 MiB
+llama_init_from_model:        CPU compute buffer size =   296.01 MiB
+llama_init_from_model: graph nodes  = 1030
+llama_init_from_model: graph splits = 514 (with bs=512), 1 (with bs=1)
+common_init_from_params: setting dry_penalty_last_n to ctx_size = 4096
+common_init_from_params: warming up the model with an empty run - please wait ... (--no-warmup to disable)
+main: llama threadpool init, n_threads = 4
+main: chat template is available, enabling conversation mode (disable it with -no-cnv)
+main: chat template example:
+[INST] You are a helpful assistant
+
+Hello[/INST] Hi there</s>[INST] How are you?[/INST]
+
+system_info: n_threads = 4 (n_threads_batch = 4) / 8 | CPU : SSE3 = 1 | SSSE3 = 1 | LLAMAFILE = 1 | OPENMP = 1 | AARCH64_REPACK = 1 | 
+
+main: interactive mode on.
+sampler seed: 2146818957
+sampler params: 
+	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 4096
+	top_k = 40, top_p = 0.950, min_p = 0.050, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.800
+	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000
+sampler chain: logits -> logit-bias -> penalties -> dry -> top-k -> typical -> top-p -> min-p -> xtc -> temp-ext -> dist 
+generate: n_ctx = 4096, n_batch = 2048, n_predict = -1, n_keep = 1
+
+== Running in interactive mode. ==
+ - Press Ctrl+C to interject at any time.
+ - Press Return to return control to the AI.
+ - To return control without starting a new line, end your input with '/'.
+ - If you want to submit another line, end your input with '\'.
+
+  What is the meaning of life and the universe?
+
+
+> The question of the meaning of life and the universe is a philosophical and metaphysical question that has been asked by humans for centuries. Various philosophers, scientists, and religious leaders have proposed different answers throughout history.
+
+Some propose that the meaning of life is to seek happiness, personal growth, or fulfillment, while others argue that it is to contribute to the betterment of humanity or to find a connection with a higher power.
+
+From a
+llama_perf_sampler_print:    sampling time =      10.63 ms /    95 runs   (    0.11 ms per token,  8934.45 tokens per second)
+llama_perf_context_print:        load time =    8574.29 ms
+llama_perf_context_print: prompt eval time =  534485.29 ms /    15 tokens (35632.35 ms per token,     0.03 tokens per second)
+llama_perf_context_print:        eval time =  844186.51 ms /    94 runs   ( 8980.71 ms per token,     0.11 tokens per second)
+llama_perf_context_print:       total time = 1385561.58 ms /   109 tokens
+Interrupted by user
